@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/parser/src/com/distocraft/dc5000/etl/parser/StandaloneMain.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.distocraft.dc5000.etl.parser.StandaloneMain"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="standaloneparser"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="parser"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx256m&#13;&#10;-Ddc5000.config.directory=C:/eniq/sw/conf&#13;&#10;-Ddc.conf.dir=C:/eniq/sw/conf&#13;&#10;-Djava.util.logging.config.file=C:/eniq/sw/conf/engineLogging.properties&#13;&#10;-DCONF_DIR=C:/eniq/sw/conf&#13;&#10;-DPMDATA_DIR=C:/eniq/data/pmdata&#13;&#10;-DETLDATA_DIR=C:/eniq/data/etldata&#13;&#10;-DFMDATA_DIR=C:/eniq/fmdata&#13;&#10;-DLOG_DIR=C:/eniq/sw/log/engine/standaloneparser&#13;&#10;-DREJECTED_DIR=C:/eniq/data/rejected&#13;&#10;-DREFERENCE_DIR=C:/eniq/data/reference&#13;&#10;-DPLATFORM_DIR=C:/eniq/sw/bin&#13;&#10;-DARCHIVE_DIR=C:/eniq/archive&#13;&#10;-DOSS=eniq_oss_1"/>
+</launchConfiguration>

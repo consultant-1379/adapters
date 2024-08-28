@@ -1,0 +1,32 @@
+<project name="stfiop" default="compile">
+
+  <property name="pack.name" value="stfiop"/>
+  <property name="pack.version" value="5-0-0"/>
+
+  <!-- Attention! pack.dir have to be under tmp-dir because the actual build is done there --> 
+  <property name="pack.dir" value="/vobs/eniq/design/plat/adapters/dev/stfiop"/>
+
+  <!-- ENIQ Jars -->
+  <property name="eniq.parser.dir" value="/vobs/eniq/design/plat/adapters/build/parser"/>
+
+  <target name="precompile"/>
+  
+  <target name="compile">
+    <mkdir dir="${pack.dir}/classes"/>
+    <javac srcdir="${pack.dir}/src" destdir="${pack.dir}/classes"
+           failonerror="true"
+           debug="off"
+           optimize="off" 
+           deprecation="off">
+      <classpath>
+        <pathelement path="${classpath}"/>
+		<fileset dir="${eniq.parser.dir}">
+	    	<include name="**/*.jar"/>
+	    </fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="postcompile"/>
+
+</project>

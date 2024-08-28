@@ -1,0 +1,47 @@
+50 = SUBSDATA
+50_prop = subsDataBlock.prop
+
+51 = ENDOFPRINTOUT
+51_prop = footerBlock.prop
+
+52 = EXTSUBSDATA
+52_prop = extSubsDataBlock.prop
+
+255 = ENDOFEXTSUBSDATA
+255_prop = endOfExtSubsDataBlock.prop
+
+0 = SS_DATA
+0_prop = ssDataBlock.prop
+
+1 = CUG_DATA
+1_prop = CUGDataBlock.prop
+
+2 = IMSI_CHANGEOVER_DATA
+2_prop = IMSIChangeOverDataBlock.prop
+
+3 = CAMEL_DATA
+3_prop = CAMELDataBlock.prop
+
+4 = MMINT_DATA
+4_prop = MMINTDataBlock.prop
+
+5 = GPRS_DATA
+5_prop = GPRSDataBlock.prop
+
+6 = TRACING_DATA
+6_prop = TracingDataBlock.prop
+
+7 = LOCATION_GMSC_DATA
+7_prop = GMSCDataBlock.prop
+
+8 = LCS_DATA
+8_prop = LCSDataBlock.prop
+
+9 = SPATIAL_TRIGGERS_DATA
+9_prop = SpatialTriggersDataBlock.prop
+
+10 = MSIM_DATA
+10_prop = MSIMDataBlock.prop
+
+11 = SPAM_SMS_DATA
+11_prop = SpamSMSDataBlock.prop

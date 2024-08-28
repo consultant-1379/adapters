@@ -1,0 +1,24 @@
+<project name="bcd" default="test_all">
+    <property name="module.name" value="bcd"/>
+    <property file="${user.home}/EniqBuild/BH/build.properties"/>
+    <property name="ant.common" value="${cc.base}/tools/ant_common"/>
+    <property file="${ant.common}/common.properties"/>
+    <property name="module.build" value="${module.bcd.build}"/>
+    <property name="module.base" value="${module.bcd.base}"/>
+    <property name="module.dependants" value="${module.bcd.dependants}"/>
+    <import file="${ant.common}/common.xml"/>
+    <property name="tests.to.run" value="**/*Test.class"/>
+
+    <path id="bcd.lib.classpath">
+        <path refid="plaform.lib.classpath"/>
+        <path location="${module.common_utilities.pkg}"/>
+        <path location="${module.engine.pkg}"/>
+        <path location="${module.parser.pkg}"/>
+        <path location="${module.repository.pkg}"/>
+    </path>
+    <path id="bcd.test.classpath">
+        <path refid="platform.test.classpath"/>
+        <path refid="bcd.lib.classpath"/>
+        <path location="${eniq.plat.base}/adapters/dev/bcd/"/>
+    </path>
+</project>

@@ -1,0 +1,14 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+Condition = 205
+C0602 = DynStart, 1, Integer, 1
+C0603 = DynStart, 1, Integer, 1
+
+# repeated once, if visited GMLC address format is IPv4
+C0604+C0603.EQ.4 = C0604+.prop
+
+# repeated once, if visited GMLC address format is IPv6
+C0608+C0603.EQ.16 = C0608+.prop

@@ -1,0 +1,31 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+B0000 = 0, 1, String
+B0001  = 1, 3, Integer
+B0004 = 4, 8, BCDNumber
+B0012 = 12, 8, BCDNumber
+B0020  = 20, 1, Integer
+
+#These three will be repeated A0020 times
+#B0021* = B0021Multi.prop
+B0021* = Multiplier \= B0020 \n\
+         B0021 \= DynStart, 8, BCDNumber \n\
+         B0029 \= DynStart, 2, Integer \n\
+         B0031 \= DynStart, 1, Integer
+
+# Exceptional handling of these two is made to parser
+# Rule is that these two values are repeated until 254 or 255 is reached
+# and the columns will be "SUD"<value of A0032>" -> <value of A0033>
+B0032 = SpecialHandling
+B0033 = SpecialHandling
+
+# Exceptional handling of these three is made to parser
+# Rule is that next key will be B0035, if next byte is 254 integer value
+# If next is 255 integer value, then it is B0044 and B0036 does not exist
+B0035 = SpecialHandling
+B0036 = DynStart, 8, BCDNumber
+B0044 = DynStart, 1, Integer
+

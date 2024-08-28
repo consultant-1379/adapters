@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="VIEW_PATH/common_utilities/build/common_utilities/common.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/adapters/build/parser/parser.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/junit/v4_5/prod/junit-4.5.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/installer/build/repository/repository.jar" sourcepath="VIEW_PATH/installer/dev/repository"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

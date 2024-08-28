@@ -1,0 +1,49 @@
+<project name="install" basedir="." default="all">
+
+	<property name="dcinstall.require.parser" value="> 5-0-0b21" />
+
+	<target name="install" depends="copyTmpToDeploy">
+		<if>
+			<available file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/ebinary.jar" />
+			<then>
+				<delete file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/ebinary.jar" />
+				<copy todir="${dc.runtime.dir}/tomcat/webapps/techpackide/lib" flatten="true">
+					<fileset dir="${dc.platform.dir}">
+						<include name="**/dclib/ebinary.jar" />
+					</fileset>
+				</copy>
+			</then>
+			<else />
+		</if>
+
+		<mkdir dir="${dc.conf.dir}/efnrParserConf" />
+		<!-- Delete property files -->
+		<delete>
+			<fileset dir="${dc.conf.dir}/efnrParserConf" />
+		</delete>		
+		
+		<!-- Copy property files -->
+		<copy todir="${dc.conf.dir}/efnrParserConf">
+			<fileset dir="${dc.installer.dir}/tmp/efnrParserConf" />
+		</copy>
+
+		<mkdir dir="${dc.conf.dir}/ehlrParserConf" />
+		<!-- Delete property files -->
+		<delete>
+			<fileset dir="${dc.conf.dir}/ehlrParserConf" />
+		</delete>
+			
+		<!-- Copy property files -->
+		<copy todir="${dc.conf.dir}/ehlrParserConf">
+			<fileset dir="${dc.installer.dir}/tmp/ehlrParserConf" />
+		</copy>
+		
+	</target>
+
+	<target name="update" depends="moveToObsolete,install">
+
+		<echo message="Removing nokalva references" />
+		<delete verbose="true" dir="${dc.runtime.dir}/nokalva" />
+	</target>
+
+</project>

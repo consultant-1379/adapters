@@ -1,0 +1,54 @@
+PM-File-Description
+
+DEFINITIONS AUTOMATIC TAGS ::=
+
+BEGIN
+
+MeasDataCollection ::= SEQUENCE {
+   measFileHeader MeasFileHeader,
+   measData SEQUENCE OF MeasData,
+   measFileFooter MeasFileFooter }
+
+MeasFileHeader ::= SEQUENCE { 
+   fileFormatVersion INTEGER, 
+   senderName GraphicString (SIZE (0..400)), 
+   senderType SenderType, 
+   vendorName GraphicString (SIZE (0..32)), 
+   collectionBeginTime TimeStamp }
+
+SenderType ::= GraphicString (SIZE (0..8))
+ 
+TimeStamp ::= GeneralizedTime
+
+MeasData ::= SEQUENCE { 
+   nEId NEId, 
+   measInfo SEQUENCE OF MeasInfo }
+
+NEId ::= SEQUENCE { 
+   nEUserName GraphicString (SIZE (0..64)), 
+   nEDistinguishedName GraphicString (SIZE (0..400)) } 
+
+MeasInfo ::= SEQUENCE { 
+   measTimeStamp TimeStamp, 
+   granularityPeriod INTEGER, 
+   measTypes SEQUENCE OF MeasType, 
+   measValues SEQUENCE OF MeasValue } 
+
+MeasType ::= GraphicString (SIZE (1..32)) 
+
+MeasValue ::= SEQUENCE { 
+   measObjInstId MeasObjInstId, 
+   measResults SEQUENCE OF MeasResult, 
+   suspectFlag BOOLEAN DEFAULT FALSE }
+
+MeasObjInstId ::= GraphicString (SIZE (1..64)) 
+
+MeasResult ::= CHOICE { 
+   iValue INTEGER, 
+   rValue REAL, 
+   noValue NULL,
+   sValue GraphicString (SIZE (0..128))} 
+
+MeasFileFooter ::= TimeStamp
+
+END

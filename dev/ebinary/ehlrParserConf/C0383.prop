@@ -1,0 +1,14 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+#There is no condition as teh condition is in the calling properties file.
+#This data only iterates once (no need to have Multipler), but the properties 
+#files called from here might iterate multiple times.
+
+C0383 = DynStart, 1, Integer, 2
+C0384 = DynStart, 1, Integer, 2
+C0385* = C0385Multi.prop
+C0386 = DynStart, 1, Integer, 2
+C0387* = C0387Multi.prop

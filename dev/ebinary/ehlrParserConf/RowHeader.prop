@@ -1,0 +1,9 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+A0001  = 1, 12, String
+B0001  = 13, 3, Integer
+B0004 = 16, 8, BCDNumber
+B0012 = 24, 8, BCDNumber

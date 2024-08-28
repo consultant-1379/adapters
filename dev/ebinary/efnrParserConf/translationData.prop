@@ -1,0 +1,5 @@
+B0 = 0, 1, String
+B1  = 1, 1, Integer
+B2 = 2, 1, String
+B3 = 3, 8, BCDNumber
+B11 = 11, MAX, BCDNumber

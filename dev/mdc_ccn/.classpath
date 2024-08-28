@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/design/plat/common_utilities/build/common_utilities/common.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/design/plat/installer/build/installer/installer.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/design/plat/installer/build/repository/repository.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/3pp/apache/xerces_impl/v2_0_2/prod/xercesImpl-2.0.2.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/design/plat/adapters/build/parser/parser.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/vobs/eniq/3pp/apache/xerces_parser/v2_6_2/prod/xerces-2.6.2.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

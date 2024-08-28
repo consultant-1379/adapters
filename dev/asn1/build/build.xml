@@ -1,0 +1,35 @@
+<project name="asn1" default="compile">
+
+  <property name="pack.name" value="asn1"/>
+  <property name="pack.version" value="5-0-0"/>
+
+  <!-- Attention! pack.dir have to be under tmp-dir because the actual build is done there --> 
+  <property name="pack.dir" value="/vobs/eniq/design/plat/adapters/dev/asn1"/>
+
+  <!-- ENIQ Jars -->
+  <property name="eniq.parser.dir" value="/vobs/eniq/design/plat/adapters/build/parser"/>
+
+
+  <target name="precompile">
+  	<delete dir="${pack.dir}/generated"/>
+  </target>
+  
+  <target name="compile">
+    <mkdir dir="${pack.dir}/classes"/>
+    <javac srcdir="${pack.dir}/src" destdir="${pack.dir}/classes"
+           failonerror="true"
+           debug="off"
+           optimize="off" 
+           deprecation="off">
+      <classpath>
+        <pathelement path="${classpath}"/>
+		<fileset dir="${eniq.parser.dir}">
+	    	<include name="**/*.jar"/>
+	    </fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="postcompile"/>
+
+</project>

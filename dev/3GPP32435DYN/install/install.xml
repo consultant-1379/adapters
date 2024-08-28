@@ -1,0 +1,41 @@
+<project name="install" basedir="." default="all">
+
+	<property name="dcinstall.require.libs" value="> 5-0-0b5" />
+	<property name="dcinstall.require.parser" value="> 5-0-0b212" />
+
+	<target name="install" depends="copyTmpToDeploy">
+		<if>
+			<available file="${dc.conf.dir}/3GPPDYN_CounterList.properties" />
+			<then>
+				<delete file="${dc.conf.dir}/3GPPDYN_CounterList.properties" />
+			</then>
+		</if>
+		<copy file="${dc.installer.dir}/tmp/conf/3GPPDYN_CounterList.properties" toFile="${dc.conf.dir}/3GPPDYN_CounterList.properties" />
+		<chmod file="${dc.conf.dir}/3GPPDYN_CounterList.properties" perm="440" />
+		
+		<if>
+			<available file="${dc.conf.dir}/3gppdynmdcmapping.properties" />
+			<then>
+				<delete file="${dc.conf.dir}/3gppdynmdcmapping.properties" />
+			</then>
+		</if>
+		<copy file="${dc.installer.dir}/tmp/conf/3gppdynmdcmapping.properties" toFile="${dc.conf.dir}/3gppdynmdcmapping.properties" />
+		<chmod file="${dc.conf.dir}/3gppdynmdcmapping.properties" perm="440" />
+		
+		<if>
+			<available file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/3GPP32435DYN.jar" />
+			<then>
+				<delete file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/3GPP32435DYN.jar" />
+				<copy todir="${dc.runtime.dir}/tomcat/webapps/techpackide/lib" flatten="true">
+					<fileset dir="${dc.platform.dir}">
+						<include name="**/dclib/3GPP32435DYN.jar" />
+					</fileset>
+				</copy>
+			</then>
+			<else />
+		</if>
+	</target>
+
+	<target name="update" depends="moveToObsolete,install" />
+
+</project>

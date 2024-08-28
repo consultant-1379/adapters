@@ -1,0 +1,39 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+C0555 = DynStart, 1, C0555bits.prop, 1
+C0556 = DynStart, 9, BCDNumber, 1
+C0565 = DynStart, 1, Integer, 1
+
+# If MSRN/MSC indicator != 2.
+C0566+C0565.NE.2 = C0566+.prop
+
+C0576 = DynStart, 1, Integer, 1
+
+# If LMSID indicator != 1.
+C0577+C0576.NE.1 = C0577+.prop
+
+C0581 = DynStart, 1, Integer, 1
+C0582 = DynStart, 1, Integer, 1
+C0583 = DynStart, 1, Integer, 1
+C0584 = DynStart, 3, C0584.prop
+C0587 = DynStart, 1, Integer, 1
+C0588 = DynStart, 1, Integer, 1
+C0589 = DynStart, 1, Integer, 1
+C0590 = DynStart, 1, Integer, 1
+C0591 = DynStart, 1, C0591bits.prop
+C0592 = DynStart, 1, Integer, 1
+C0593 = DynStart, 1, Integer, 1
+C0594 = DynStart, 1, Integer, 1
+C0595 = DynStart, 1, Integer, 1
+C0596 = DynStart, 1, C0596bits.prop
+C0597 = DynStart, 1, Integer, 1
+C0598 = DynStart, 1, Integer, 1
+C0599 = DynStart, 1, Integer, 1
+C0600 = DynStart, 1, Integer, 1
+C0601 = DynStart, 1, C0601bits.prop
+
+# Contains data if visited GMLC address is received from VLR. Otherwise the value is 0
+C0602+ = C0602+.prop

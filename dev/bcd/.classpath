@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/apache/xerces_impl/v2_0_2/prod/xercesImpl-2.0.2.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/adapters/build/parser/parser.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/installer/build/repository/repository.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/common_utilities/build/common_utilities/common.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/etl_controller/build/engine/engine.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/cglib-2.1_3-src.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/jmock-junit4-2.5.1.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/jmock-legacy-2.5.1.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/objenesis-1.0.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/junit/v4_5/prod/junit-4.5.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/jmock-2.5.1.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="var" path="VIEW_PATH/eniq_3pp/jmock-2.5.1/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

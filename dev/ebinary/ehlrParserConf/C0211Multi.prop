@@ -1,0 +1,12 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+Multiplier = C0210
+
+C0211 = DynStart, 1, Integer, 4
+C0212 = DynStart, 4, Integer, 4
+C0216 = DynStart, 8, BCDNumber, 4
+C0224 = DynStart, 1, Integer, 4
+C0225 = DynStart, 1, Integer, 4

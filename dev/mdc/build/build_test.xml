@@ -1,0 +1,25 @@
+<project name="mdc" default="test_all">
+    <property name="module.name" value="mdc"/>
+    <property file="${user.home}/EniqBuild/BH/build.properties"/>
+    <property name="ant.common" value="${cc.base}/tools/ant_common"/>
+    <property file="${ant.common}/common.properties"/>
+    <property name="module.build" value="${module.mdc.build}"/>
+    <property name="module.base" value="${module.mdc.base}"/>
+    <property name="module.dependants" value="${module.mdc.dependants}"/>
+    <import file="${ant.common}/common.xml"/>
+    <property name="tests.to.run" value="**/*Test.class"/>
+
+    <path id="mdc.lib.classpath">
+        <path refid="plaform.lib.classpath"/>
+        <path location="${module.common_utilities.pkg}"/>
+        <path location="${module.repository.pkg}"/>
+        <path location="${module.parser.pkg}"/>
+    	<path location="${module.installer.pkg}"/>
+    </path>
+    <path id="mdc.test.classpath">
+        <path refid="platform.test.classpath"/>
+        <path refid="mdc.lib.classpath"/>
+         <!-- importActionTest will fail because the working dir is different....-->
+        <path location="${eniq.plat.base}/adapters/dev/mdc/"/>
+    </path>
+</project>

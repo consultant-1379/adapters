@@ -1,0 +1,10 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+C0001  = 0, 1, Integer, 1
+
+#These three will be repeated Dynamic times
+C0002+ = C0002+.prop
+C0050+ = C0050+.prop

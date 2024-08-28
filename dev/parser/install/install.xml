@@ -1,0 +1,27 @@
+<project name="install" basedir="." default="all">
+
+	<property name="dcinstall.require.libs" value="> 5-0-0b5"/>
+	<property name="dcinstall.require.common" value="> 5-0-0b21"/>
+	<property name="dcinstall.require.engine" value="> 5-0-0b422"/>
+	<property name="dcinstall.require.repository" value="> 5-0-0b242"/>
+
+	<target name="install" depends="copyTmpToDeploy">
+		<mkdir dir="${dc.conf.dir}/dtd"/>
+		
+		<if>
+  		  <available file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/parser.jar"/>
+  		  <then>
+  			<delete file="${dc.runtime.dir}/tomcat/webapps/techpackide/lib/parser.jar"/>
+			<copy todir="${dc.runtime.dir}/tomcat/webapps/techpackide/lib" flatten="true">
+				<fileset dir="${dc.platform.dir}">
+  					<include name="**/dclib/parser.jar"/>
+  				</fileset>
+  			</copy>
+  		  </then>
+  		  <else/>
+  	    </if>
+	</target>
+
+	<target name="update" depends="moveToObsolete,install"/>
+
+</project>

@@ -1,0 +1,5 @@
+#Used by keys C0007,C0008,C0009,C0010,C0011,C0012 in C0002+.prop
+
+b = 0, 4, BinaryInt
+a = 4, 4, BinaryInt
+

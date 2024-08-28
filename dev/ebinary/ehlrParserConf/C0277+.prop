@@ -1,0 +1,25 @@
+# The .prop-files are configured according to the document:
+# No:    1/190 83-CNT 238 0072 Uen
+# Name:  HSPDFOAFILE
+# These keys must be in alphabetical order, if any dynamic keys are included
+
+Condition = 135
+
+C0277 = DynStart, 1, Integer, 3
+C0278 = DynStart, 1, Integer, 3
+C0279 = DynStart, 1, Integer, 3
+C0280* = C0280Multi.prop
+
+
+
+
+
+
+
+
+
+
+
+
+
+

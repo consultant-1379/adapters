@@ -1,0 +1,9 @@
+A0000 = 0, 1, Integer
+A0001  = 1, 12, String
+A0013 = 13, 2, String
+A0015 = 15, 2, String
+A0017  = 17, 2, String
+A0019 = 19, 2, String
+A0021 = 21, 2, String
+A0023 = 23, 1, ADMParamTable.prop
+A0024 = 24, 8, BCDNumber

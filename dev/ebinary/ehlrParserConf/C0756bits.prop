@@ -1,0 +1,4 @@
+#Used by key C0756 in MSIMDataBlock.prop
+
+b = 0, 2, binaryInt, 1
+a = 5, 3, binaryInt, 1

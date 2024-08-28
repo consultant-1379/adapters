@@ -1,0 +1,99 @@
+-- ============================================================================
+--
+-- %CCaseFile:	Axd301PmFile.asn %
+-- %CCaseRev:	/main/R7A/4 %
+-- %CCaseDate:	01-06-28 %
+-- %CCaseDocNo:	2/190 02-AXD 301 01/1 Ux %
+-- %Rev:		A %
+-- Author:	ETX/D/XGBP Ulf Nordström 	etxulno@etxb.ericsson.se
+--
+-- ============================================================================
+-- Template Id: ETX/B 002 01-196 03/1 Rev B
+-- 
+-- Copyright (C) 1996 by Ericsson Telecom AB
+-- S - 125 26  STOCKHOLM
+-- SWEDEN, tel int + 46 8 719 0000
+-- 
+-- This program may be used and/or copied only with the written permission
+-- from Ericsson Telecom AB, or in accordance with the terms and
+-- conditions stipulated in the agreement/contract under which the program
+-- has been supplied.
+-- 
+-- All rights reserved.
+-- 
+-- ============================================================================
+--
+-- REVISION HISTORY
+-- 
+-- Rev      Date       Name        What
+-- ------   ------     ------      ------
+--
+--  R7A/1   00-08-07   etxulno    Created
+-- ============================================================================
+--
+-- DESCRIPTION
+--
+-- This module specifies the format of the performance measurement
+-- data file that is sent from PERF in AXD 301 to PMR in the NMS.
+-- The general format of the file is first one header, and then a number 
+-- of records with the same format.
+--
+-- ============================================================================
+
+Axd301PmFile DEFINITIONS IMPLICIT TAGS ::= BEGIN
+
+
+--	Copied from RFC 1155-SMI
+                 IpAddress ::=
+                     [APPLICATION 0]
+                         OCTET STRING (SIZE (4))
+        
+-- 	End copy
+
+-- IA5String ::= OCTET STRING
+
+Status ::=  ENUMERATED
+{
+	complete (1),		-- The reading was successful
+	noDataAvailable (2),	-- Some values are missing
+	noSuchInstance (3),	-- The instance does no longer exist
+        noSuchObject (4),
+        other (5)
+}
+
+
+
+-- File header
+Header ::= [10]  SEQUENCE 
+{
+    version		[1] INTEGER,
+    sender		[2] IpAddress,
+    nodeType		[3] IA5String,
+    measType		[4] IA5String,
+    counters		[5] SEQUENCE OF OBJECT IDENTIFIER
+}
+
+
+-- Performance data report. One report for each instance 
+-- 
+Pdr ::= [11]  SEQUENCE 
+{
+    timeStamp		[1] INTEGER,
+    measurementName	[2] IA5String,
+    instance		[3] IA5String,
+    status		[4] Status,
+    valuelist		[5] SEQUENCE OF INTEGER 
+
+}
+
+
+-- The complete file
+File ::= [14]  CHOICE 
+{
+    header		[1] Header,
+    pdrs		[2] SEQUENCE OF Pdr 
+}
+
+
+
+END

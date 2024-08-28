@@ -1,0 +1,9 @@
+<project name="install" basedir="." default="all">
+
+	<property name="dcinstall.require.libs" value="> 5-0-0b5"/>
+	<property name="dcinstall.require.parser" value="> 5-0-0b212"/>
+	
+	<target name="install" depends="copyTmpToDeploy"/>
+	<target name="update" depends="moveToObsolete,install"/>
+
+</project>

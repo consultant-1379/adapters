@@ -1,0 +1,8 @@
+#Used by key C0017 in C0013+.prop
+#Used by key C0555 in C0555+.prop
+#Used by key C0566 in C0566+.prop
+#Used by key C0629 in C0629+.prop
+
+c = 0, 1, BinaryInt
+b = 1, 3, BinaryInt
+a = 4, 4, BinaryInt

@@ -1,0 +1,3 @@
+c = 0, 1, BinaryInt
+b = 2, 3, BinaryInt
+a = 4, 4, BinaryInt
